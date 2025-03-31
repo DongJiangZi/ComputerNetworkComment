@@ -27,7 +27,7 @@ MAC: Media Access Control Address - 媒体访问控制地址
 
 MAC地址由**6字节**数据组成，固化在网卡的ROM中，由IEEE802标准规定，结构图：
 
-![](.\Note - MAC地址结构图.png)
+![](MAC.png)
 
 OUI查询：
 

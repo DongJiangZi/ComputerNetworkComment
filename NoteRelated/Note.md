@@ -149,7 +149,7 @@ IPv4编址方法经历三个历史阶段：
 
 分类编址形式如下：
 
-![](.\IP分类编址各类型格式.png)
+![](images/ipSortKinds.png)
 
 > 备注：单播、广播、组播/多播
 >
@@ -256,7 +256,7 @@ example：`128.14.35.7/20`其中最后的20表示该IP地址前20位为网络号
 
 #### 2.4.2 数据包传送过程
 
-![](.\数据包传输过程示意图.png)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+![](images\pduTransmission.png)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
 
 #### 2.4.3 因特网的公网和私网
 
@@ -309,11 +309,11 @@ MTU(Maximum Transfer Unit, 最大传输单元)作用于帧的数据部分，其�
 
 - 以太网V2的MAC帧
 
-  ![以太网V2的MAC帧](.\以太网V2的MAC帧.png)
+  ![](images/EthernetV2.png)
 
 - PPP帧
 
-  ![PPP帧](.\PPP帧.png)
+  ![](images/pppFrame.png)
 
 封装成帧是指数据链路层为网络层传递的PDU添加一个首部和尾部变成帧
 
@@ -327,11 +327,11 @@ MTU(Maximum Transfer Unit, 最大传输单元)作用于帧的数据部分，其�
 
 - 面向字节的物理链路使用字节填充的方法实现透明传输，原理是在上层传递的PDU中，假设使用`2f`作为标识符，只要遇到与帧定界或者标识符`2f`相同的数据，就在该数据前添加`2f`表示此字节为数据内容，不是帧定界
 
-  ![透明传输1](.\透明传输1.png)
+  ![](images/transparentTransmission1.png)
 
 - 面向比特的物理链路使用**比特填充**的方法实现透明传输，原理是假设`01111110`作为标识符，那么在数据内容中只要遇到连续五个`1`，就添加一个`0`，接收方相反操作，就可以实现数据准确传输
 
-  ![透明传输2](.\透明传输2.png)
+  ![](images/transparentTransmission2.png)
 
 #### 3.2.3 差错检测
 
@@ -349,17 +349,17 @@ MTU(Maximum Transfer Unit, 最大传输单元)作用于帧的数据部分，其�
 
 发送方操作：
 
-![](.\CRC发送方.png)
+![](images/crcSender.png)
 
 接收方操作：
 
-![](.\CRC接收方.png)
+![](images/crcReceiver.png)
 
 ### 3.3 Ethernet V2标准
 
 以太网的帧最少为`64`字节
 
-![](.\以太网帧.png)
+![](images/EthernetFrame.png)
 
 数据最短长度 = 帧最短长度(64) - 目标MAC地址(6) - 源MAC地址(6) - 类型(2) - FCS(4) = 46
 
@@ -373,7 +373,7 @@ MTU(Maximum Transfer Unit, 最大传输单元)作用于帧的数据部分，其�
 
 #### 3.4.2 PPP帧
 
-![](.\PPP帧2.png)
+![](images/pppFrame2.png)
 
 - 标志(Flag)字段：帧的定界符，取值为`0x7E`
 - 地址(Address)字段：取值为`0xFF`，预留（无作用）
@@ -404,7 +404,7 @@ MTU(Maximum Transfer Unit, 最大传输单元)作用于帧的数据部分，其�
 
 IP协议数据报格式：
 
-![](.\IP协议.png)
+![](images/ipProtocol.png)
 
 1. 版本：4bit，用于表示IP协议的版本
 

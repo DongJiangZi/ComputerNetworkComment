@@ -32,9 +32,9 @@
 
 > 即使在路由器设置下一跳为PC2，仍然需要发送ARP包，下一跳服务于网络层，并不会记录MAC地址
 
-![Photo1](D:\Learning\Computer Network\Experiment\test2\Photo1.png)
+![Photo1](images\Photo1.png)
 
-![Photo2](D:\Learning\Computer Network\Experiment\test2\Photo2.png)
+![Photo2](images\Photo2.png)
 
 ## Experiment2
 
@@ -69,7 +69,7 @@ PC1向PC3发送PDU
 
 - 未设置路由表：PC1发送ICMP，不知道PC3的MAC地址，也不知道网关的MAC地址，先发送一个ARP广播包，寻找网关，网关返回ARP包，接着PC1向网关发送ICMP包，网关不知道PC3的MAC地址，将发来的ICMP包丢掉，也不知道由于路由表中未设置PC3的IP地址，网关会发一个ICMP给PC1，PDU转发失败
 
-![Photo6](D:\Learning\Computer Network\Experiment\test2\Photo6.png)
+![Photo6](images\Photo6.png)
 
 - 设置路由表：路由器内存有限，现在进行路由聚合，
 
@@ -88,10 +88,10 @@ PC1第一次向PC3转发
 
 与`Experiment1`类似，也会丢包，但是不同的是丢包发生在R2，因为R1收到ICMP包后，根据路由表，直接转发给R2，但是R2不知道PC3的MAC地址，会将ICMP包丢掉，发送一个ARP包，获取PC3的MAC地址，整个过程结束
 
-![](D:\Learning\Computer Network\Experiment\test2\Photo3.png)
+![](images\Photo3.png)
 
 PC1之后向PC3转发PDU，可以一步到位了
 
-![](D:\Learning\Computer Network\Experiment\test2\Photo4.png)
+![](images\Photo4.png)
 
-![](D:\Learning\Computer Network\Experiment\test2\Photo5.png)
+![](images\Photo5.png)
